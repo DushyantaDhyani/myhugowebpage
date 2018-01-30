@@ -1,0 +1,93 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+
+  {{ partial "header_image.html" . }}
+
+  <div class="article-container">
+
+    <div class="pub-title">
+      <h1 itemprop="name">{{ .Title }}</h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        {{ partial "share.html" . }}
+      </span>
+    </div>
+
+    {{ with .Params.external_link }}
+    <a class="btn btn-primary btn-outline" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "open_project_site" }}</a>
+    {{ end }}
+
+    <div class="article-style" itemprop="articleBody">
+      {{ .Content }}
+    </div>
+
+    <div class="visible-xs space-below"></div>
+    <div class="visible-xs space-below"></div>
+    
+
+    {{ $page := . }}
+    {{ $project := .File.TranslationBaseName }}
+    {{ $project_path := printf "%s/%s/" .Section $project }}
+
+    {{ if (.Site.Params.projects.list_children | default true) }}
+      {{ $items := where (where .Site.RegularPages "Type" "publication") ".Params.projects" "intersect" (slice $project) }}
+      {{ $items := $items | union (where (where .Site.RegularPages "Type" "publication") ".Params.url_project" $project_path) }}
+      {{ $pubs_len := len $items }}
+      {{ if ge $pubs_len 1 }}
+        <h2>{{ (i18n "publications") }}</h2>
+        {{ range $items }}
+          {{ if eq $page.Site.Params.projects.publication_format 1 }}
+            {{ partial "publication_li_detailed" . }}
+          {{ else if eq $page.Site.Params.projects.publication_format 2 }}
+            {{ partial "publication_li_apa" . }}
+          {{ else if eq $page.Site.Params.projects.publication_format 3 }}
+            {{ partial "publication_li_mla" . }}
+          {{ else }}
+            {{ partial "publication_li_simple" . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+
+      {{ $items := where (where .Site.RegularPages "Type" "talk") ".Params.projects" "intersect" (slice $project) }}
+      {{ $items := $items | union (where (where .Site.RegularPages "Type" "publication") ".Params.url_project" $project_path) }}
+      {{ $talks_len := len $items }}
+      {{ if ge $talks_len 1 }}
+        <h2>{{ (i18n "talks") }}</h2>
+        {{ range $items }}
+          {{ partial "talk_li_simple" . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+
+
+     <div class="row" style="padding-top: 10px">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+           <div class="row">
+              <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;font-weight: bold;">{{ i18n "links" }}</div>
+              <div class="col-xs-12 col-sm-9">
+
+             {{ partial "publication_links" (dict "content" . "is_list" 0) }}
+           </div>
+        </div>
+     </div>
+     
+     <div class="col-sm-1"></div>
+
+    <div class="visible-xs space-below"></div>
+
+  </div>
+  
+        
+  
+</article>
+
+<div class="container">
+  {{ partial "section_pager.html" . }}
+</div>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}
