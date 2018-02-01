@@ -3,8 +3,8 @@ date = 2016-11-28T14:00:00
 # Schedule page publish date.
 
 title = "Employing External Rich Knowledge for Machine Comprehension"
-# time_start = 2030-06-01T13:00:00
-# time_end = 2030-06-01T15:00:00
+time_start = 2016-11-28T14:00:00  
+#time_end = 2030-06-01T15:00:00
 abstract = ""
 abstract_short = ""
 event = "Natural Language Question Answering Course, Autumn 16"
