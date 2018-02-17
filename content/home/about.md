@@ -13,7 +13,8 @@ weight = 5
     "Machine Learning",
     "Deep Learning",
     "Natural Language Processing & Information Extraction",
-    "Weakly Supervised Methods in Machine Learning"
+    "Weakly Supervised Methods in Machine Learning",
+    "Domain Adaptation/Adversarial Techniques"
   ]
 
 # List your qualifications (such as academic degrees).
