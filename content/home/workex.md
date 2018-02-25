@@ -22,7 +22,7 @@ weight = 18
 - **Software Engineering Intern**, AWS Deep Learning
 
 	As part of the team that built [Amazon Comprehend](https://aws.amazon.com/comprehend/) I worked on the following tasks for deployment of an NLP service (currently not part of the Comprehend suite) on AWS Infrastructure:
-	- Performing extensive experiments using multiple machine learning models and datasets for the given task along with hyper-parameter optimization.
+	- Performing extensive experiments using multiple machine learning models and datasets for the given task.
 	- Creating end to end Serverless application using various AWS services like Step Functions, Lambda, Elastic Container Service, etc.
 
 
