@@ -1,7 +1,6 @@
 +++
 title = "OhioState at SemEval-2018 Task 7: Exploiting Data Augmentation for Relation Classification in Scientific Papers using Piecewise Convolutional Neural Networks"
 date = "2018-02-26"
-
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
 authors = ["Dushyanta Dhyani"]
 
