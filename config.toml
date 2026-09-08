@@ -8,12 +8,6 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 preserveTaxonomyNames = true
 paginate = 10
 
-# Enable comments by entering your Disqus shortname
-disqusShortname = ""
-
-# Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = "UA-71301141-1"
-
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = false
@@ -22,12 +16,22 @@ defaultContentLanguageInSubdir = false
   home = [ "HTML", "CSS", "RSS" ]
   section = [ "HTML", "RSS" ]
 
-# Configure BlackFriday Markdown rendering.
-#   See: https://gohugo.io/readfiles/bfconfig/
-[blackfriday]
-  hrefTargetBlank = true  # `true` opens external links in a new tab.
-  fractions = true  # `false` disables smart fractions (e.g. 5/12 formatted as a fraction).
-  smartypants = true  # `false` disables all smart punctuation substitutions (e.g. smart quotes, dashes, fractions).
+# Enable analytics by entering your GA4 Measurement ID (looks like "G-XXXXXXXXXX").
+# Universal Analytics (the old "UA-..." IDs) was shut down by Google in July 2023,
+# so the previous UA ID here was no longer tracking anything.
+[services]
+  [services.googleAnalytics]
+    ID = ""
+  # Enable comments by entering your Disqus shortname
+  [services.disqus]
+    shortname = ""
+
+# Markdown rendering.
+# Hugo replaced the BlackFriday renderer with Goldmark years ago, so the old
+# [blackfriday] config block (hrefTargetBlank, fractions, smartypants) is no longer
+# read. Smart quotes/dashes are on by default under Goldmark's typographer extension;
+# opening absolute links in a new tab is now handled by the render hook at
+# themes/academic/layouts/_default/_markup/render-link.html.
 
 [params]
   # Color theme.
@@ -285,4 +289,4 @@ defaultContentLanguageInSubdir = false
 
 # Configure the English version of the website.
 [Languages.en]
-  languageCode = "en-us"
+  locale = "en-us"

@@ -1,0 +1,7 @@
+{{/*
+  Goldmark render hook for markdown links.
+  Replicates the old BlackFriday `hrefTargetBlank = true` config option
+  (BlackFriday was removed in favor of Goldmark; that config key is now a no-op),
+  by opening absolute links in a new tab.
+*/}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
