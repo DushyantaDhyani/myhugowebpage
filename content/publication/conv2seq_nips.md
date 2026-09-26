@@ -3,7 +3,7 @@ title = "Tutorial - A Convolutional Encoder Model for Neural Machine Translation
 date = "2017-12-09"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Dushyanta Dhyani", "Pravar Mahajan"]
+authors = ["**Dushyanta Dhyani**", "Pravar Mahajan"]
 
 # Publication type.
 # Legend:

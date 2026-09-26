@@ -2,7 +2,11 @@
 # Projects widget.
 # This widget displays all projects from `content/workex/`.
 widget = "projects"
-active = true
+# Hidden: all three listed projects are academic-era (pre-2018). Individual
+# project pages (/project/...) still exist and are reachable directly; only
+# this homepage section and its nav link are hidden. Flip to `true` to bring
+# back, or add newer projects to content/project/ first.
+active = false
 date = "2016-04-20T00:00:00"
 
 title = "Projects"

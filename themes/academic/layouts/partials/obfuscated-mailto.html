@@ -1,0 +1,35 @@
+{{/*
+  Email obfuscation against scraper bots.
+
+  Called as: {{ partial "obfuscated-mailto.html" (dict "id" "some-id" "email" $address "revealText" true) }}
+
+  How it works: the raw address is never written into the page's HTML as
+  plain text (which is what most spam bots grep for). At *build* time, Hugo
+  base64-encodes it into this inline script. At *browser render* time, this
+  script decodes it and patches the href (and, if revealText is set, the
+  visible text) of #<id> onto a real "mailto:" link. A person with a normal
+  browser sees a working link immediately; a bot that only reads the raw
+  HTML/JS source sees gibberish, not an email address, and has to actually
+  execute the base64 decode to recover it — most harvesters don't bother.
+
+  This is "raise the bar", not "unbreakable": a bot that runs a real
+  browser (headless Chrome, etc.) will still see the real address, same as
+  a human would. It stops the cheap, high-volume scrapers, not a targeted one.
+
+  id:         the element whose href gets fixed up (must exist above this
+              partial call in the HTML, since the script runs immediately).
+  email:      the address to encode.
+  revealText: optional. If true, also sets the element's visible text to
+              the decoded address (used for a text link like "Email" or
+              the address itself). Omit for an icon-only link, so the
+              icon's <i> markup isn't wiped out.
+*/}}
+<script>
+(function(){
+  var e = document.getElementById({{ .id }});
+  if (!e) return;
+  var addr = atob({{ .email | base64Encode }});
+  e.href = 'mailto:' + addr;
+  {{ if .revealText }}e.textContent = addr;{{ end }}
+})();
+</script>

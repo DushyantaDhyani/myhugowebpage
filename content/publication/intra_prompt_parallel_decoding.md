@@ -1,9 +1,14 @@
 +++
-title = "OhioState at SemEval-2018 Task 7: Exploiting Data Augmentation for Relation Classification in Scientific Papers Using Piecewise Convolutional Neural Networks"
-date = "2018-02-02"
+title = "Intra-Prompt Parallel Decoding for Common-Context Question Answering"
+# NOTE: acceptance was Sep 2026; day-level precision unknown so using the
+# 1st of the month. The EMNLP 2026 conference itself is later (Nov/Dec) -
+# if you switch this to that date, remember Hugo silently EXCLUDES
+# future-dated content from the build (pages vanish, no error) unless you
+# pass --buildFuture/-F.
+date = "2026-09-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["**Dushyanta Dhyani**"]
+authors = ["Theodore Glavas", "Nikhita Vedula", "**Dushyanta Dhyani**", "Antonios Valkanas", "Yilun Zhu", "Shervin Malmasi"]
 
 # Publication type.
 # Legend:
@@ -14,14 +19,15 @@ authors = ["**Dushyanta Dhyani**"]
 # 4 = Technical report
 # 5 = Book
 # 6 = Book chapter
-# publication_types = ["1"]
+publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = "In *Proceedings of The 12th International Workshop on Semantic Evaluation*"
+publication = "EMNLP 2026"
 publication_short = ""
 
 # Abstract and optional shortened version.
-abstract = "We describe our system for SemEval-2018 Shared Task on Semantic Relation Extraction and Classification in Scientific Papers where we focus on the Classification task. Our simple piecewise convolution neural network (PCNN) performs decently in an end to end manner. A simple inter-task data augmentation significantly boosts the performance of the model. Our best-performing systems stood 8th out of 20 teams on the classification task on noisy data and 12th out of 28 teams on the classification task on clean data." 
+# NOTE: left blank - not included on the resume this entry was sourced from.
+abstract = ""
 abstract_short = ""
 
 # Featured image thumbnail (optional)
@@ -36,7 +42,8 @@ selected = false
 # projects = [""]
 
 # Links (optional).
-url_pdf = "http://aclweb.org/anthology/S18-1124"
+# NOTE: left blank - not included on the resume this entry was sourced from.
+url_pdf = ""
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -46,7 +53,6 @@ url_video = ""
 url_poster = ""
 url_source = ""
 
-url_custom = [{name = "Task Description", url = "https://lipn.univ-paris13.fr/~gabor/semeval2018task7/"}]
 
 # Does the content use math formatting?
 math = true
@@ -61,4 +67,3 @@ image = ""
 caption = ""
 
 +++
-

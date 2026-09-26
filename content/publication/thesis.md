@@ -3,7 +3,7 @@ title = "Boosting Supervised Neural Relation Extraction with Distant Supervision
 date = "2018-05-06"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Dushyanta Dhyani"]
+authors = ["**Dushyanta Dhyani**"]
 
 # Publication type.
 # Legend:

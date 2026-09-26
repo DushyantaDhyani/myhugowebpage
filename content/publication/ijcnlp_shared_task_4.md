@@ -3,7 +3,7 @@ title = "OhioState at IJCNLP-2017 Task 4: Exploring Neural Architectures for Mul
 date = "2017-11-29"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["Dushyanta Dhyani"]
+authors = ["**Dushyanta Dhyani**"]
 
 # Publication type.
 # Legend:

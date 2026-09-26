@@ -16,10 +16,25 @@
       {{ with $.Site.Params.email }}
       <li>
         <i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i>
-        <span id="person-email" itemprop="email">
-        {{- if $autolink }}<a href="mailto:{{ . }}">{{ . }}</a>{{ else }}{{ . }}{{ end -}}
+        {{/* id="person-email" is also referenced by the itemref on the About
+             widget's Person schema, so keep the id even though itemprop="email"
+             is dropped here: an obfuscated address has no valid content to
+             publish as structured data until JS decodes it. */}}
+        <span id="person-email">
+        {{- if $autolink -}}
+        <a href="#" id="contact-email-link" rel="nofollow">Email</a>
+        {{- else -}}
+        {{ . }}
+        {{- end -}}
         </span>
       </li>
+      {{ if $autolink }}
+      {{/* revealText omitted on purpose: link always reads "Email"; only the
+           href (invisible on the page, only present in the DOM/HTML attribute)
+           carries the real address. Purely cosmetic - a bot running real JS
+           reads the href either way, same as it would the visible text. */}}
+      {{ partial "obfuscated-mailto.html" (dict "id" "contact-email-link" "email" .) }}
+      {{ end }}
       {{ end }}
 
       {{ with $.Site.Params.discussion }}

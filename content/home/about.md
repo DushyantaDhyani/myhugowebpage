@@ -10,10 +10,11 @@ weight = 5
 # List your academic interests.
 [interests]
   interests = [
-    "Natural Language Processing & Information Extraction",
-    "Weakly Supervised Methods in Machine Learning",
-    "Low Resource NLP",
-    "Scalable Machine/Deep Learning"
+    "Information Retrieval",
+    "LLM-Based Probabilistic Regression",
+    "Efficient LLM Inference",
+    "Multilingual LLMs",
+    "Agentic Systems for Scaling Model Evaluation"
   ]
 
 # List your qualifications (such as academic degrees).
@@ -35,6 +36,8 @@ weight = 5
 
 # About Me
 
-Dushyanta is an Applied Scientist at Amazon. Prior to this, he was  a Master's student in the [Computer Science Department](cse.ohio-state.edu) at The Ohio State University where he was working under the supervision of [Prof. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/) on [Weakly Supervised methods for Neural Relation Extraction](https://etd.ohiolink.edu/pg_10?0::NO:10:P10_ACCESSION_NUM:osu1524095334803486). In Summer 2017, he worked as an SDE intern at the AWS Deep Learning group in Seattle on prototyping the [custom classification](https://docs.aws.amazon.com/comprehend/latest/dg/how-document-classification.html) tool that was released as part of the [AWS Comprehend](https://aws.amazon.com/comprehend/) suite. Prior to joining OSU he was a Research Assistant at the [Ubiquitous Knowledge Processing Lab](https://www.ukp.tu-darmstadt.de) under the supervision of [Prof Dr. Iryna Gurevych](https://www.ukp.tu-darmstadt.de/people/group-heads/prof-dr-iryna-gurevych/).
+Dushyanta is a Senior Applied Scientist at Amazon, where he is the technical lead for Amazon Pricing's Foundational modeling team, re-imagining price estimation for a billion-scale product catalog. His research spans information retrieval, LLM-based probabilistic regression, efficient LLM inference, and agentic systems for automated auditing. He previously led the science strategy for Amazon Books' Inauthentic Book Duplicates and Content Moderation programs, and joined Amazon as a Machine Learning Engineer on Alexa Brain and Amazon Comprehend.
 
-Dushyanta's [Resume](/files/DushyantaDhyaniResume_02_11_2020.pdf)
+Dushyanta holds an MS in Computer Science from The Ohio State University, where he worked with [Prof. Huan Sun](http://web.cse.ohio-state.edu/~sun.397/) on [Weakly Supervised methods for Neural Relation Extraction](https://etd.ohiolink.edu/pg_10?0::NO:10:P10_ACCESSION_NUM:osu1524095334803486), and was previously a Research Assistant at the [Ubiquitous Knowledge Processing Lab](https://www.ukp.tu-darmstadt.de) under [Prof. Dr. Iryna Gurevych](https://www.ukp.tu-darmstadt.de/people/group-heads/prof-dr-iryna-gurevych/).
+
+Dushyanta's [Resume](/files/DushyantaDhyaniResume_2026.pdf)

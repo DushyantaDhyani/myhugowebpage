@@ -15,8 +15,8 @@ weight = 15
 
 +++
 
-- **(January, 2018)** I ranked [8th out of 20 teams](http://lipn.univ-paris13.fr/~gabor/semeval2018task7/table1.2.html) on [Semeval,2018 subtask for Relation Classification on Noisy Scientific Data](https://competitions.codalab.org/competitions/17422)
+- **(September, 2026)** [One paper]({{< ref "intra_prompt_parallel_decoding.md" >}}) was accepted to the EMNLP 2026 Main Conference, and [another]({{< ref "scaling_ecommerce_attribute_extraction.md" >}}) to the AKBC 2026 Workshop
 
-- **(December, 2018)** Our tutorial on [A Convolutional Encoder Model for Neural Machine Translation]({{< ref "conv2seq_nips.md" >}}) was accepted at the [NIPS workshop on Learn How to code a paper with state of the art frameworks](https://mltrain.cc/events/nips-highlights-learn-how-to-code-a-paper-with-state-of-the-art-frameworks/)
+- **(April, 2026)** Two papers were accepted to ACL 2026: [Text-to-Distribution Prediction with Quantile Tokens and Neighbor Context]({{< ref "text_to_distribution_quantile_tokens.md" >}}) and [Breaking the Autoregressive Chain: Hyper-Parallel Decoding for Efficient LLM-Based Attribute Value Extraction]({{< ref "hyper_parallel_decoding_attribute_extraction.md" >}}) (Findings)
 
-- **(November, 2018)** My [system]({{< ref "ijcnlp_shared_task_4.md" >}}) ranked in Top - 5 submissions for Spanish and French Task in [IJCNLP 2017 Shared Task on Multilingual Customer Feedback Analysis](https://sites.google.com/view/customer-feedback-analysis/)
+- **(June, 2025)** My paper on [LLM-based distributional regression]({{< ref "quantile_regression_llm_price_prediction.md" >}}) was accepted to Findings of ACL 2025

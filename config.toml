@@ -1,6 +1,6 @@
 baseurl = "https://dushyantadhyani.github.io/"  # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
 title = "Dushyanta Dhyani"
-copyright = "&copy; 2018 Dushyanta Dhyani"
+copyright = "&copy; 2018&ndash;2026 Dushyanta Dhyani"
 theme = "academic"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^</sup>"
@@ -44,17 +44,17 @@ defaultContentLanguageInSubdir = false
 
   # Your details.
   name = "Dushyanta Dhyani"
-  role = "Masters Student in Computer Science"
+  role = "Senior Applied Scientist"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "The Ohio State University", url = "" } ]
+  organizations = [ { name = "Amazon", url = "" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "profimg2.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
-  email = "dhyani.2@osu.edu"
-  address = "539 Stinchcomb Drive #1, Columbus, Ohio, 43202, USA"
-  
+  email = "dush.dhyani@gmail.com"
+  # No street address published (contact widget shows email only).
+
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
 
@@ -203,9 +203,20 @@ defaultContentLanguageInSubdir = false
   #   Full list: https://jpswalsh.github.io/academicons/
 
   [[params.social]]
+    # Note: this `link` value is unused for the envelope icon specifically -
+    # that one is rendered from `email` above via an obfuscated mailto (see
+    # themes/academic/layouts/partials/obfuscated-mailto.html) so the address
+    # isn't left as plain text for scraper bots. Kept here just for reference.
     icon = "envelope"
     icon_pack = "fa"
-    link = "mailto:dhyani.2@osu.edu"
+    link = "mailto:dush.dhyani@gmail.com"
+
+  [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fa"
+    # NOTE: inferred vanity URL (matches the site's other usernames) -
+    # confirm/correct this against your actual LinkedIn profile URL.
+    link = "https://www.linkedin.com/in/dushyantadhyani"
 
   [[params.social]]
     icon = "twitter"
@@ -253,10 +264,9 @@ defaultContentLanguageInSubdir = false
   url = "#publications"
   weight = 3
 
-[[menu.main]]
-  name = "Talks"
-  url = "#talks"
-  weight = 4
+# Talks, Projects, and Teaching widgets/sections are hidden (all dated 2016-2018,
+# stale relative to current work) - their menu entries are removed to match.
+# Re-add (and re-activate the corresponding content/home/*.md widget) if revived.
 
 #[[menu.main]]
 #  name = "Posts"
@@ -264,19 +274,14 @@ defaultContentLanguageInSubdir = false
 #  weight = 5
 
 [[menu.main]]
-  name = "Projects"
-  url = "#projects"
-  weight = 5
-
-[[menu.main]]
-  name = "Teaching"
-  url = "#teaching"
-  weight = 6
+  name = "Skills"
+  url = "#skills"
+  weight = 4
 
 [[menu.main]]
   name = "Contact"
   url = "#contact"
-  weight = 7
+  weight = 5
 
 # Taxonomies.
 [taxonomies]

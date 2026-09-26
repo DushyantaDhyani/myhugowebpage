@@ -1,0 +1,16 @@
+# Hugo build output. This directory is the `dushyantadhyani.github.io`
+# submodule (see .gitmodules) - build into it with `hugo`, then commit/push
+# from inside that submodule separately. Never stage generated site output
+# here in the source repo.
+/public/
+
+# Hugo's local dev-server lock file. Created while `hugo server` is running,
+# normally removed on clean shutdown; left behind if the process is killed.
+.hugo_build.lock
+
+# Hugo's generated/processed-asset cache.
+/resources/
+.hugo_cache/
+
+# macOS Finder metadata.
+.DS_Store

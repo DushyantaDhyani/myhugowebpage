@@ -12,7 +12,11 @@
 {{ $section := .Scratch.Get "section" }}
 
 <!-- Widgets -->
-{{ range $index, $page := where (where .Site.Pages "Section" $section) ".Params.active" "!=" false }}
+{{/* Kind == "page" excludes Hugo's auto-generated section list page (there's
+     no content/home/_index.md, so Hugo synthesizes one titled "Homes" with
+     Section == "home" too) - without this filter it slips through as a
+     stray empty widget alongside the real ones. */}}
+{{ range $index, $page := where (where (where .Site.Pages "Section" $section) "Kind" "page") ".Params.active" "!=" false }}
   {{ $params := dict "root" $ "page" $page }}
   {{ $widget := printf "widgets/%s.html" ( or $page.Params.widget "custom" ) }}
   {{ if eq $page.Params.widget "hero" }}

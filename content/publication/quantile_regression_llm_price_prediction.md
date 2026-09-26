@@ -1,9 +1,14 @@
 +++
-title = "OhioState at SemEval-2018 Task 7: Exploiting Data Augmentation for Relation Classification in Scientific Papers Using Piecewise Convolutional Neural Networks"
-date = "2018-02-02"
+title = "Quantile regression with large language models for price prediction"
+# NOTE: acceptance was June 2025; day-level precision unknown so using the
+# 1st of the month.
+date = "2025-06-01"
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = ["**Dushyanta Dhyani**"]
+# NOTE: Nikhita Vedula and Dushyanta Dhyani are joint first authors (marked
+# with * on the source resume); asterisks are backslash-escaped below so
+# markdownify doesn't misread the pair as an emphasis span across the list.
+authors = ["Nikhita Vedula\\*", "**Dushyanta Dhyani**\\*", "Laleh Jalali", "Boris N. Oreshkin", "Mohsen Bayati", "Shervin Malmasi"]
 
 # Publication type.
 # Legend:
@@ -14,20 +19,24 @@ authors = ["**Dushyanta Dhyani**"]
 # 4 = Technical report
 # 5 = Book
 # 6 = Book chapter
-# publication_types = ["1"]
+publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = "In *Proceedings of The 12th International Workshop on Semantic Evaluation*"
+publication = "Findings of ACL 2025"
 publication_short = ""
 
 # Abstract and optional shortened version.
-abstract = "We describe our system for SemEval-2018 Shared Task on Semantic Relation Extraction and Classification in Scientific Papers where we focus on the Classification task. Our simple piecewise convolution neural network (PCNN) performs decently in an end to end manner. A simple inter-task data augmentation significantly boosts the performance of the model. Our best-performing systems stood 8th out of 20 teams on the classification task on noisy data and 12th out of 28 teams on the classification task on clean data." 
+# NOTE: left blank - not included on the resume this entry was sourced from.
+abstract = ""
 abstract_short = ""
 
 # Featured image thumbnail (optional)
 image_preview = ""
 
 # Is this a selected publication? (true/false)
+# NOTE: left false like the others, matching them for now - the Selected
+# Publications widget is inactive anyway so this has no visible effect
+# currently. Flip if you want this one to stand out once that widget is on.
 selected = false
 
 # Projects (optional).
@@ -36,7 +45,8 @@ selected = false
 # projects = [""]
 
 # Links (optional).
-url_pdf = "http://aclweb.org/anthology/S18-1124"
+# NOTE: left blank - not included on the resume this entry was sourced from.
+url_pdf = ""
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -46,7 +56,6 @@ url_video = ""
 url_poster = ""
 url_source = ""
 
-url_custom = [{name = "Task Description", url = "https://lipn.univ-paris13.fr/~gabor/semeval2018task7/"}]
 
 # Does the content use math formatting?
 math = true
@@ -61,4 +70,3 @@ image = ""
 caption = ""
 
 +++
-

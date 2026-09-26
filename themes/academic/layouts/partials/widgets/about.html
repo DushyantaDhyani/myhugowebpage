@@ -39,12 +39,23 @@
       <link itemprop="url" href="{{ $.Site.BaseURL }}">
 
       <ul class="network-icon" aria-hidden="true">
-        {{ range $.Site.Params.social }}
-        {{ $pack := or .icon_pack "fa" }}
+        {{ range $index, $s := $.Site.Params.social }}
+        {{ $pack := or $s.icon_pack "fa" }}
         <li>
-          <a itemprop="sameAs" href="{{ .link | safeURL }}" target="_blank" rel="noopener">
-            <i class="{{ $pack }} {{ $pack }}-{{ .icon }} big-icon"></i>
+          {{ if eq $s.icon "envelope" }}
+          {{/* Email gets obfuscated (see obfuscated-mailto.html) rather than
+               printed as a plain mailto: link, so it's not left in the raw
+               HTML for scraper bots to grep out. */}}
+          {{ $elId := printf "social-email-%d" $index }}
+          <a id="{{ $elId }}" href="#" rel="nofollow">
+            <i class="{{ $pack }} {{ $pack }}-{{ $s.icon }} big-icon"></i>
           </a>
+          {{ partial "obfuscated-mailto.html" (dict "id" $elId "email" $.Site.Params.email) }}
+          {{ else }}
+          <a itemprop="sameAs" href="{{ $s.link | safeURL }}" target="_blank" rel="noopener">
+            <i class="{{ $pack }} {{ $pack }}-{{ $s.icon }} big-icon"></i>
+          </a>
+          {{ end }}
         </li>
         {{ end }}
       </ul>
