@@ -6,11 +6,21 @@
     {{- end -}}
   </span>
   ({{- .Date.Format "2006" -}}).
+  {{/* external_only pages have no standalone site page (see [_build] in the
+       content file) - link the title straight to the paper instead, and skip
+       the PDF/preprint button row below since it'd just duplicate this link. */}}
+  {{ $extURL := or .Params.url_pdf .Params.url_preprint }}
+  {{ if and .Params.external_only $extURL }}
+  <a href="{{ $extURL }}" itemprop="name" target="_blank" rel="noopener">{{ .Title }}</a>.
+  {{ else }}
   <a href="{{ .Permalink }}" itemprop="name">{{ .Title }}</a>.
+  {{ end }}
   {{ if .Params.publication_short }}
     {{- .Params.publication_short | markdownify -}}
   {{ else }}
     {{- .Params.publication | markdownify -}}
   {{ end }}.
+  {{ if not (and .Params.external_only $extURL) }}
   <p>{{ partial "publication_links" (dict "content" . "is_list" 1) }}</p>
+  {{ end }}
 </div>

@@ -25,6 +25,13 @@ publication_types = ["1"]
 publication = "11th Workshop on Automated Knowledge Base Construction (AKBC) 2026"
 publication_short = "AKBC 2026"
 
+# No standalone /publication/<slug>/ page for this entry - it links straight
+# out to the paper via url_preprint below instead. See publication_li_mla.html
+# (and the other publication_li_*.html partials) for how external_only is
+# used, and the [build] table at the bottom of this file for how the page
+# itself is excluded from being rendered.
+external_only = true
+
 # Abstract and optional shortened version.
 # NOTE: left blank - not included on the resume this entry was sourced from.
 abstract = ""
@@ -42,9 +49,11 @@ selected = false
 # projects = [""]
 
 # Links (optional).
-# NOTE: left blank - not included on the resume this entry was sourced from.
+# Preprint on arXiv - the AKBC 2026 workshop itself hasn't happened yet
+# (Oct), so this is the only public link so far. Extracted from the link
+# annotations embedded in the source resume PDF.
 url_pdf = ""
-url_preprint = ""
+url_preprint = "https://arxiv.org/pdf/2609.09716"
 url_code = ""
 url_dataset = ""
 url_project = ""
@@ -65,5 +74,10 @@ highlight = true
 [header]
 image = ""
 caption = ""
+
+# No standalone page generated for this entry (see external_only above) -
+# it still appears in publication lists (list is unaffected by render).
+[build]
+  render = false
 
 +++

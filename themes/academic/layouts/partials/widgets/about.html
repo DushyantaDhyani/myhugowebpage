@@ -2,7 +2,12 @@
 {{ $page := .page }}
 
 <!-- About widget -->
-<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="{{ if $.Site.Params.email }}person-email{{ end }}{{ if $.Site.Params.phone }} person-telephone{{ end }}{{ if $.Site.Params.address}} person-address{{ end }}">
+{{/* email is no longer pulled in via itemref from the Contact widget (which
+     is now inactive/removed) - it's set directly below as itemprop="email"
+     on the envelope icon, which already lives inside this itemscope. phone/
+     address stay itemref'd in case a Contact widget with those ever comes
+     back; email is intentionally left out of that list. */}}
+<div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person" itemref="{{ if $.Site.Params.phone }}person-telephone{{ end }}{{ if $.Site.Params.address}} person-address{{ end }}">
   <div class="col-xs-12 col-md-4">
     <div id="profile">
 
@@ -47,7 +52,7 @@
                printed as a plain mailto: link, so it's not left in the raw
                HTML for scraper bots to grep out. */}}
           {{ $elId := printf "social-email-%d" $index }}
-          <a id="{{ $elId }}" href="#" rel="nofollow">
+          <a id="{{ $elId }}" href="#" rel="nofollow" itemprop="email">
             <i class="{{ $pack }} {{ $pack }}-{{ $s.icon }} big-icon"></i>
           </a>
           {{ partial "obfuscated-mailto.html" (dict "id" $elId "email" $.Site.Params.email) }}

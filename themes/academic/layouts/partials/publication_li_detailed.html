@@ -1,10 +1,16 @@
 <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
+  {{/* external_only pages have no standalone site page (see [_build] in the
+       content file) - link straight to the paper instead, and skip the
+       PDF/preprint button row below since it'd just duplicate this link. */}}
+  {{ $extURL := or .Params.url_pdf .Params.url_preprint }}
+  {{ $titleLink := .Permalink }}
+  {{ if and .Params.external_only $extURL }}{{ $titleLink = $extURL }}{{ end }}
   <div class="row">
 
     {{ if .Params.image_preview }}
 
     <div class="col-md-12">
-      <a href="{{ .Permalink }}">
+      <a href="{{ $titleLink }}">
         <img src="{{ "/img/" | relURL }}{{ .Params.image_preview }}" class="pub-banner"
              itemprop="image">
       </a>
@@ -14,7 +20,7 @@
     {{ else if .Params.header.image}}
 
     <div class="col-md-12">
-      <a href="{{ .Permalink }}">
+      <a href="{{ $titleLink }}">
         <img src="{{ "/img/" | relURL }}{{ .Params.header.image }}" class="pub-banner" itemprop="image">
       </a>
     </div>
@@ -27,7 +33,7 @@
     {{ end }}
 
       <h3 class="article-title" itemprop="name">
-        <a href="{{ .Permalink }}" itemprop="url">{{ .Title }}</a>
+        <a href="{{ $titleLink }}" itemprop="url"{{ if and .Params.external_only $extURL }} target="_blank" rel="noopener"{{ end }}>{{ .Title }}</a>
       </h3>
 
       <div class="pub-abstract" itemprop="text">
@@ -53,9 +59,11 @@
         {{- .Date.Format "2006" -}}.
       </div>
 
+      {{ if not (and .Params.external_only $extURL) }}
       <div class="pub-links">
         {{ partial "publication_links" (dict "content" . "is_list" 1) }}
       </div>
+      {{ end }}
 
     </div>
   </div>

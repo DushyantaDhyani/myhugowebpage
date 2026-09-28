@@ -25,6 +25,13 @@ publication_types = ["1"]
 publication = "Findings of ACL 2025"
 publication_short = ""
 
+# No standalone /publication/<slug>/ page for this entry - it links straight
+# out to the paper via url_pdf below instead. See publication_li_mla.html
+# (and the other publication_li_*.html partials) for how external_only is
+# used, and the [build] table at the bottom of this file for how the page
+# itself is excluded from being rendered.
+external_only = true
+
 # Abstract and optional shortened version.
 # NOTE: left blank - not included on the resume this entry was sourced from.
 abstract = ""
@@ -45,8 +52,9 @@ selected = false
 # projects = [""]
 
 # Links (optional).
-# NOTE: left blank - not included on the resume this entry was sourced from.
-url_pdf = ""
+# ACL Anthology PDF - extracted from the link annotations embedded in the
+# source resume PDF.
+url_pdf = "https://aclanthology.org/2025.findings-acl.641.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -68,5 +76,10 @@ highlight = true
 [header]
 image = ""
 caption = ""
+
+# No standalone page generated for this entry (see external_only above) -
+# it still appears in publication lists (list is unaffected by render).
+[build]
+  render = false
 
 +++

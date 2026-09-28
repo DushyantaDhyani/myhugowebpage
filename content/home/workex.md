@@ -27,8 +27,9 @@ weight = 18
 
 - **Senior Applied Scientist** (Apr 2024 &ndash; Aug 2024), **Applied Scientist II** (Oct 2020 &ndash; Mar 2024), **Applied Scientist I** (Oct 2019 &ndash; Sep 2020), Amazon Books
 
-	- **Inauthentic Book Duplicates** &ndash; Led a cross-functional team to drive the science solution and long-term strategy for the Inauthentic Book Duplicates program across Amazon Books, including end-to-end design and implementation of a multi-stage text ranking service: a transformer-based neural ranking model for book pair scoring, a scalable hybrid retrieval engine with lexical and vector search, and a near-real-time inference service scoring 500M book pairs per day.
-	- **Book Content Moderation** &ndash; Built the Content Moderation framework for detecting hate speech and explicit content in long-context book interiors using multi-task, multi-instance learning (MIL) approaches.
+	- **Started and led a cross-functional team** to build Content Moderation solutions for Amazon Books, including:
+		- **Hate speech and explicit content detection:** Developed multi-task, multi-instance learning (MIL) approaches to detect policy-violating content in long-context book interiors.
+		- **Copyright infringement detection:** Designed and implemented an end-to-end, multi-stage text ranking system, including a transformer-based neural ranking model for book-pair scoring, a scalable hybrid retrieval engine combining lexical and vector search, and a near-real-time inference service processing **500M book pairs per day**.
 
 <!-- - **Machine Learning Engineer**, Alexa Brain & Amazon Comprehend (Jul 2018 &ndash; Sep 2019)
 

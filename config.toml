@@ -214,9 +214,8 @@ defaultContentLanguageInSubdir = false
   [[params.social]]
     icon = "linkedin"
     icon_pack = "fa"
-    # NOTE: inferred vanity URL (matches the site's other usernames) -
-    # confirm/correct this against your actual LinkedIn profile URL.
-    link = "https://www.linkedin.com/in/dushyantadhyani"
+    # Confirmed against the link annotation embedded in the 2026 resume PDF.
+    link = "https://www.linkedin.com/in/dushyantadhyani/"
 
   [[params.social]]
     icon = "twitter"
@@ -264,9 +263,12 @@ defaultContentLanguageInSubdir = false
   url = "#publications"
   weight = 3
 
-# Talks, Projects, and Teaching widgets/sections are hidden (all dated 2016-2018,
-# stale relative to current work) - their menu entries are removed to match.
-# Re-add (and re-activate the corresponding content/home/*.md widget) if revived.
+# Talks, Projects, Teaching, and Contact widgets/sections are hidden - Talks/
+# Projects/Teaching are all dated 2016-2018 (stale relative to current work);
+# Contact only ever showed email, which is already reachable via the
+# obfuscated envelope icon under the photo in the About section. Their menu
+# entries are removed to match. Re-add (and re-activate the corresponding
+# content/home/*.md widget) if revived.
 
 #[[menu.main]]
 #  name = "Posts"
@@ -277,11 +279,6 @@ defaultContentLanguageInSubdir = false
   name = "Skills"
   url = "#skills"
   weight = 4
-
-[[menu.main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 5
 
 # Taxonomies.
 [taxonomies]

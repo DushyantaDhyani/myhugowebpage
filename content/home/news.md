@@ -15,8 +15,8 @@ weight = 15
 
 +++
 
-- **(September, 2026)** [One paper]({{< ref "intra_prompt_parallel_decoding.md" >}}) was accepted to the EMNLP 2026 Main Conference, and [another]({{< ref "scaling_ecommerce_attribute_extraction.md" >}}) to the AKBC 2026 Workshop
+- **(September, 2026)** [One paper](https://arxiv.org/pdf/2609.05707) was accepted to the EMNLP 2026 Main Conference, and [another](https://arxiv.org/pdf/2609.09716) to the AKBC 2026 Workshop
 
-- **(April, 2026)** Two papers were accepted to ACL 2026: [Text-to-Distribution Prediction with Quantile Tokens and Neighbor Context]({{< ref "text_to_distribution_quantile_tokens.md" >}}) and [Breaking the Autoregressive Chain: Hyper-Parallel Decoding for Efficient LLM-Based Attribute Value Extraction]({{< ref "hyper_parallel_decoding_attribute_extraction.md" >}}) (Findings)
+- **(April, 2026)** Two papers were accepted to ACL 2026: [Text-to-Distribution Prediction with Quantile Tokens and Neighbor Context](https://aclanthology.org/2026.acl-long.758.pdf) and [Breaking the Autoregressive Chain: Hyper-Parallel Decoding for Efficient LLM-Based Attribute Value Extraction](https://aclanthology.org/2026.findings-acl.1832.pdf) (Findings)
 
-- **(June, 2025)** My paper on [LLM-based distributional regression]({{< ref "quantile_regression_llm_price_prediction.md" >}}) was accepted to Findings of ACL 2025
+- **(June, 2025)** My paper on [LLM-based distributional regression](https://aclanthology.org/2025.findings-acl.641.pdf) was accepted to Findings of ACL 2025
